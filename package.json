@@ -1,7 +1,7 @@
 {
-  "name": "modr,jquery.helper",
+  "name": "modr.jquery.helper",
   "version": "0.1.0",
-  "description": "A helper module for modr framework",
+  "description": "jQuery helper modules for modr framework",
   "keywords": [
     "javascript",
     "boilerplate",
