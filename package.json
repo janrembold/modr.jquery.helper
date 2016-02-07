@@ -1,16 +1,14 @@
 {
   "name": "modr.jquery.helper",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "jQuery helper modules for modr framework",
   "keywords": [
-    "javascript",
-    "boilerplate",
-    "modular",
-    "plugin",
-    "wrapper",
+    "modr",
+    "helper",
+    "events",
     "jquery"
   ],
-  "main": "src/modr.js",
+  "main": "js/modr.jquery.helper.events.js",
   "directories": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,10 +21,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:janrembold/modr.git"
+    "url": "git@github.com:janrembold/modr.jquery.helper.git"
   },
   "bugs": {
-    "url": "http://github.com/janrembold/modr/issues",
+    "url": "https://github.com/janrembold/modr.jquery.helper/issues",
     "email": "janrembold@gmail.com"
   },
   "dependencies": {},
