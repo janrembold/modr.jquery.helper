@@ -7,20 +7,17 @@
         module: 'events'
     };
 
-    // the modules constructor
-    function Module() {}
-
     // the modules methods
-    var methods = {
+    modr.registerModule( config, {
 
-        wrapEvents: function( eventName, fn, $elem, thisArg, params ) {
+        wrapEvents: function( eventName, fn, elem, thisArg, params ) {
 
-            var scope = thisArg;
-            var $element = $elem;
+            var scope = thisArg || this;
+            var element = elem || this.$element;
             var event = $.Event( 'before.'+eventName );
 
             // trigger event before function is executed
-            $element.trigger( event, params );
+            element.trigger( event, params );
             if ( event.isDefaultPrevented() ) {
                 return;
             }
@@ -29,17 +26,11 @@
             fn.apply(scope, params);
 
             // trigger event after function was executed
-            $element.trigger( 'after.'+eventName, params );
+            element.trigger( 'after.'+eventName, params );
 
             return scope;
         }
 
-    };
-
-    // extend plugins prototype
-    $.extend( Module.prototype, methods );
-
-    // store module for modr
-    modr.registerModule( config, Module );
+    });
 
 })(jQuery);
